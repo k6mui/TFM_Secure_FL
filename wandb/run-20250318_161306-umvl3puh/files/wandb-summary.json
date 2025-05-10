@@ -1,0 +1,1 @@
+{"_timestamp":1.7423113322859485e+09,"_wandb":{"runtime":546},"federated_evaluate_accuracy":0.7429278642149929,"federated_evaluate_precision":0.7491927473173465,"_step":20,"federated_evaluate_recall":0.7429757917937987,"federated_evaluate_loss":0.5545739401970897,"federated_evaluate_f1score":0.7413018170057047,"_runtime":546.728076636}

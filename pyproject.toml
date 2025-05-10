@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tfmFederatedLearning"
+version = "1.0.0"
+description = "Federated Learning for Medical Data"
+license = "Apache-2.0"
+dependencies = [
+    "flwr>=1.17.0",
+    "flwr-datasets[vision]>=0.5.0",
+    "torch==2.5.1+cu124",
+    "torchvision==0.20.1",
+    "torchaudio==2.5.1+cu124",
+    "pandas==2.2.3",
+    "numpy==2.2.5",
+    "scikit-learn==1.6.1",
+    "matplotlib==3.10.1",
+    "seaborn==0.13.2",
+    "psutil==7.0.0",
+    "skrub==0.5.3",
+    "pyarrow==19.0.1",
+    "protobuf==4.25.6",
+    "fsspec==2024.9.0",
+    "joblib==1.4.2",
+    "sympy==1.13.1",
+    "requests==2.32.3",
+    "jupyter_core==5.7.2",
+    "ipykernel==6.29.5",
+    "ipython==9.1.0",
+    "traitlets==5.14.3",
+    "tqdm==4.67.1",
+    "markdown-it-py==3.0.0",
+    "mdurl==0.1.2",
+    "pycryptodome==3.22.0",
+    "wandb==0.19.9",
+    "huggingface-hub==0.30.2",
+    "datasets==3.1.0",
+    "grpcio==1.71.0"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[tool.flwr.app]
+publisher = "jorge"
+
+[tool.flwr.app.components]
+serverapp = "tfmapp.tabular_federation.server_app:app"
+clientapp = "tfmapp.tabular_federation.client_app:app"
+
+[tool.flwr.app.config]
+num-server-rounds = 50
+fraction-evaluate = 1
+fraction-fit = 1
+local-epochs = 1
+learning-rate = 0.001
+batch-size = 4
+device = "cuda"
+use-wandb = true
+min-clients = 4
+# Parameters for DP protocol
+use-dp = false
+target-delta = 1e-5
+noise-multiplier = 0.7
+max-grad-norm = 5
+# Parameters for the SecAgg+ protocol
+use-sa = false
+num-shares = 4
+reconstruction-threshold = 3
+max-weight = 15000
+timeout = 10.0
+# Demo flag
+is-demo = false
+
+[tool.flwr.federations]
+default = "my-federation"
+
+[tool.flwr.federations.my-federation]
+address = "127.0.0.1:9093" # Address of the Exec API
+root-certificates = "certificates_tls/ca.crt"
