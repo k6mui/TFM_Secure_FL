@@ -106,6 +106,7 @@ def train(model, train_loader, val_loader, epochs, device, optimizer):
     }
 
     for epoch in range(epochs):
+        torch.cuda.empty_cache()
         print(f"\n Epoch {epoch + 1}/{epochs}")
         print("-" * 60)
         model.train()

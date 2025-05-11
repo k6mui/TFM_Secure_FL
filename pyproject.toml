@@ -47,17 +47,17 @@ packages = ["."]
 publisher = "jorge"
 
 [tool.flwr.app.components]
-serverapp = "tfmapp.tabular_federation.server_app:app"
-clientapp = "tfmapp.tabular_federation.client_app:app"
+serverapp = "tfmapp.images_federation.server_app:app"
+clientapp = "tfmapp.images_federation.client_app:app"
 
 [tool.flwr.app.config]
-num-server-rounds = 50
+num-server-rounds = 20
 fraction-evaluate = 1
 fraction-fit = 1
-local-epochs = 1
-learning-rate = 0.001
-batch-size = 4
-device = "cuda"
+local-epochs = 3
+learning-rate = 1e-3
+batch-size = 2
+device = "cpu"
 use-wandb = true
 min-clients = 4
 # Parameters for DP protocol

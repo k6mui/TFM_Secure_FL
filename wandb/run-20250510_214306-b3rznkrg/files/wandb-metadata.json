@@ -1,0 +1,46 @@
+{
+  "os": "Windows-11-10.0.22631-SP0",
+  "python": "CPython 3.12.6",
+  "startedAt": "2025-05-10T19:43:06.094730Z",
+  "args": [
+    "--run-once",
+    "--serverappio-api-address",
+    "127.0.0.1:9091",
+    "--insecure"
+  ],
+  "program": "<python with no main file>",
+  "git": {
+    "remote": "https://github.com/k6mui/TFM_Secure_FL.git",
+    "commit": "5069996bd568e1a5e99e17ceb07d506e9c41f7db"
+  },
+  "email": "100516411@alumnos.uc3m.es",
+  "root": "C:\\Users\\jorge\\Desktop\\UC3M\\TFM\\tfmCode\\tfmapp",
+  "host": "k6mui_comput",
+  "executable": "C:\\Users\\jorge\\Desktop\\UC3M\\TFM\\tfmCode\\flwrEnv\\Scripts\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "509722226688",
+      "used": "504430989312"
+    }
+  },
+  "memory": {
+    "total": "14877257728"
+  },
+  "cpu": {
+    "count": 8,
+    "countLogical": 16
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "memoryTotal": "4294967296",
+      "cudaCores": 2048,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.5"
+}

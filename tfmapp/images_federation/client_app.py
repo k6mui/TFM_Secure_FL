@@ -69,10 +69,8 @@ class FlowerClient(NumPyClient):
                 self.trainloader,
                 self.valloader,
                 self.local_epochs,
-                self.batch_size,
                 self.device,
                 optimizer,
-                self.lr,
             )
 
             last_epoch = -1
