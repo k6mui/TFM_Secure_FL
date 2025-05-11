@@ -1,3 +1,4 @@
+import os
 import torch
 from flwr.client import ClientApp, NumPyClient
 from flwr.common import Context

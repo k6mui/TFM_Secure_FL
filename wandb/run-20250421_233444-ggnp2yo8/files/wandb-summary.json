@@ -1,1 +1,0 @@
-{"_timestamp":1.7452725727929466e+09,"_wandb":{"runtime":1288},"Federated Evaluation/loss":0.6848187893629074,"Federated Evaluation/accuracy":0.6328545780969479,"Federated Evaluation/precision":0.31642728904847395,"_step":20,"Federated Evaluation/f1score":0.38757466552294534,"Federated Evaluation/recall":0.5,"_runtime":1288.8871195}

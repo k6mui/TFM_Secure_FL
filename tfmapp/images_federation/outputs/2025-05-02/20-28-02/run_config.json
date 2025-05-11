@@ -1,1 +1,0 @@
-{"num-server-rounds": 50, "fraction-evaluate": 1, "fraction-fit": 1, "local-epochs": 1, "learning-rate": 0.001, "batch-size": 64, "device": "cuda", "use-wandb": true, "min-clients": 2}

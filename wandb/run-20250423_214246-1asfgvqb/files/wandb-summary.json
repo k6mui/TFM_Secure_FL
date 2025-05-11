@@ -1,1 +1,0 @@
-{"federated_evaluate_precision":0.70702123191405,"_step":1,"federated_evaluate_recall":0.46567498017444564,"_wandb":{"runtime":326},"federated_evaluate_loss":0.5049686789153867,"federated_evaluate_accuracy":0.7664907651715039,"_timestamp":1.7454376915706606e+09,"federated_evaluate_f1score":0.47423323371376785,"_runtime":326.3589596}

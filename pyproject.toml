@@ -54,12 +54,12 @@ clientapp = "tfmapp.images_federation.client_app:app"
 num-server-rounds = 20
 fraction-evaluate = 1
 fraction-fit = 1
-local-epochs = 3
+local-epochs = 1
 learning-rate = 1e-3
-batch-size = 2
+batch-size = 4
 device = "cpu"
 use-wandb = true
-min-clients = 4
+min-clients = 3
 # Parameters for DP protocol
 use-dp = false
 target-delta = 1e-5
